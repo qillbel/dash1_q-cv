@@ -42,20 +42,22 @@ imgWeb = 'figs/socWeb.png'
 imgWebEnc = base64.b64encode(open(imgWeb, 'rb').read())
 
 dictSklTech = {
-    "Data Analysis":["Data Management","Data Modeling","Statistics","Python","R","Ms.Excel"],
+    "Data Analysis":["Data Management","Data Modeling","Statistics","Python","R","Databricks"],
     "Deep Learning":["Computer Vision","Graph Neural Network"],
-    "Machine Learning":["Clustering","Classification","Regression"],
+    "Machine Learning":["Classification","Clustering","Regression"],
     "Provenance":["Prov Data Model","Information Theory"],
     "Graph":["Graph Modeling","Graph Analysis","Graph Neural Network","Graph DB","Bayesian Network","UML Diagram"],
     "Project Management":["Agile","Communication","Consultation","Supervision","Presentation"],
     "Web Development":["HTML","CMS","API","MySQL DB","PHP MyAdmin","Apache Web Server"],
-    "Programming Language":["Python","R"],
+    "Programming Language":["Python","PySpark","R"],
     "Visualization":["Tableau","Plotly Dash"],
     "Version Control":["Git","Heroku"],
     "Database":["MySQL DB","Graph DB"],
 }
 dictExpSkl={
-    "Industrial Research Fellow": ["Data Analysis","Deep Learning","Machine Learning",
+    "Data Manager":["Data Analysis","Database", "Project Management", 
+                    "Programming Language","Version Control"],
+    "Industrial Research Fellow":["Data Analysis","Deep Learning","Machine Learning",
                                    "Graph","Project Management","Provenance",
                                    "Programming Language","Version Control"],
     "Demonstrator (Mentor,Invigilator,Exam Support)":["Programming Language","Project Management"],
@@ -67,6 +69,7 @@ dictExpSkl={
     "Lecturer":["Project Management","Data Analysis","Graph","Visualization",],
     "(Part-time) Website Developer":["Web Development"]
 }
+
 lab=[]; sou=[]; tar=[]
 # First level ----------------------
 for k,v in dictExpSkl.items():
@@ -228,16 +231,17 @@ index_page = html.Div(id='index_page', children=[
             html.P(["Hi, I'm Belfrit and here is my resume. Finish with my Bachelor Degree in \
                     Technic Informatic, I continued my Master Degree in Business Informatics. Then, I \
                     pursued my Doctoral Degree that focused on Information Provenance, Risk and Graph Modelling. \
-                    These days, I am an Industrial Research Fellow at the University of Exeter-England, delivering \
-                    research-based projects to local businesses in the area of information provenance, \
-                    data analysis and visualization, and machine and (graph) deep learning. I have modelled my \
-                    academic journey with the standardized provenance data model, ", 
+                    I have modelled my academic journey with the standardized provenance data model, ", 
                     html.A("PROV-DM", href="https://www.w3.org/TR/prov-dm/",target="_blank",style={'color':'cyan'}),
                     ", displayed on the left-hand side. \
-                    In addition, I deliver some online courses (i.e. ",
+                    I also worked as an Industrial Research Fellow at the University of Exeter-England, delivering research-based \
+                    projects to local businesses in the area of information provenance, data analysis, and machine and (graph) deep learning. \
+                    These days, I'm working as a Data Manager processing and surfacing data to make it available \
+                    for use for insights and researches. In addition, I'm delivering some online courses (i.e. ",
                     html.A("teaching", href="http://qillbel.org/personal/index.php?content=tea",target="_blank",style={'color':'cyan'}),") \
                     to undergrad students in Indonesia."]),            
-        ], className="seven columns", style={'border':'0px solid yellow','padding':'5px 15px','width':'370px','color':'#ffffff','font-size':'10px','line-height':'15px','text-align':'justify','float':'right'}),
+        ], style={'border':'0px solid yellow','float':'right','padding':'0px 25px 0px 0px','width':'380px','color':'#ffffff','font-size':'10px',
+                 'line-height':'15px','text-align':'justify'},className="seven columns"),
     ], className="twelve columns", style={'border':'0px solid red','margin-left':'10px','height':'320px'}),
     html.Br(),
 
