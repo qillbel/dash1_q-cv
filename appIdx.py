@@ -46,17 +46,18 @@ dictSklTech = {
     "Deep Learning":["Computer Vision","Graph Neural Network"],
     "Machine Learning":["Classification","Clustering","Regression"],
     "Provenance":["Prov Data Model","Information Theory"],
-    "Graph":["Graph Modeling","Graph Analysis","Graph Neural Network","Graph DB","Bayesian Network","UML Diagram"],
+    "Graph":["Graph Modeling","Graph Analysis","Graph Neural Network","Graph DB","Bayesian Network"],
     "Project Management":["Agile","Communication","Consultation","Supervision","Presentation"],
-    "Web Development":["HTML","CMS","API","MySQL DB","PHP MyAdmin","Apache Web Server"],
-    "Programming Language":["Python","PySpark","R"],
-    "Visualization":["Tableau","Plotly Dash"],
-    "Version Control":["Git","Heroku"],
-    "Database":["MySQL DB","Graph DB"],
+    "Web Development":["HTML","CMS","API","MySQL DB","PHP MyAdmin","Apache Web Server","Google Cloud Platform"],
+    "Programming Language":["Python","PySpark","R","Google Cloud Platform"],
+    "Visualization":["Tableau","Plotly Dash","Google Cloud Platform"],
+    "Version Control":["Git","Google Cloud Platform"],
+    "Database":["MySQL DB","Graph DB","Google Cloud Platform"],
+    "Cloud Platform":["Google Cloud Platform"],
 }
 dictExpSkl={
-    "Data Manager":["Data Analysis","Database", "Project Management", 
-                    "Programming Language","Version Control"],
+    "(Advanced)Data Manager":["Data Analysis","Database", "Project Management", 
+                    "Programming Language","Version Control","Cloud Platform"],
     "Industrial Research Fellow":["Data Analysis","Deep Learning","Machine Learning",
                                    "Graph","Project Management","Provenance",
                                    "Programming Language","Version Control"],
@@ -156,12 +157,12 @@ listProvStyle=[
 styBut = {
   'background-color': '#4CAF50',
   'color': 'white',
-  'padding': '3px',
+  'padding': '4px',
   'text-align': 'center',
   'text-decoration': 'none',
   'font-size': '10px',
-  'margin': '0 2px',
-  'border-radius': '5px 2px'
+  'margin': '0px 2px',
+  'border-radius': '3px 2px'
 }
 
 
@@ -234,10 +235,11 @@ index_page = html.Div(id='index_page', children=[
                     I have modelled my academic journey with the standardized provenance data model, ", 
                     html.A("PROV-DM", href="https://www.w3.org/TR/prov-dm/",target="_blank",style={'color':'cyan'}),
                     ", displayed on the left-hand side. \
-                    I also worked as an Industrial Research Fellow at the University of Exeter-England, delivering research-based \
+                    I used to work as an Industrial Research Fellow at the University of Exeter-England, delivering research-based \
                     projects to local businesses in the area of information provenance, data analysis, and machine and (graph) deep learning. \
-                    These days, I'm working as a Data Manager processing and surfacing data to make it available \
-                    for use for insights and researches. In addition, I'm delivering some online courses (i.e. ",
+                    Then I moved to the NHS England as a Data Manager processing and surfacing data to make it available \
+                    for use for insights and researches. These days, I'm working as an Advanced Data Engineer overviewing their cloud \
+                    infrastructure to facilitate their analysts. In addition, I'm delivering some online courses (i.e. ",
                     html.A("teaching", href="http://qillbel.org/personal/index.php?content=tea",target="_blank",style={'color':'cyan'}),") \
                     to undergrad students in Indonesia."]),            
         ], style={'border':'0px solid yellow','float':'right','padding':'0px 25px 0px 0px','width':'380px','color':'#ffffff','font-size':'10px',
@@ -260,16 +262,17 @@ index_page = html.Div(id='index_page', children=[
                                             'margin-bottom':'10px'}),
     html.Div([
         html.Div([
+            html.Span("Kidz Klub Leeds",style=styBut),
             html.Span("Exeter Southernhay Child Contact Centre",style=styBut),
-            html.Span("Mengasuh Anak Tani",style=styBut),
             html.Br(),
             html.Span("Southampton City and Region Action to Combat Hardship",style=styBut),
-            html.Br(),                        
-            html.Span("Perkampungan Sosial Pingit",style=styBut),
-            html.Span("Perkampungan Ngebong Sarkem",style=styBut),
             html.Br(),
+            html.Span("Perkampungan Ngebong Sarkem",style=styBut),
+            html.Span("Perkampungan Sosial Pingit",style=styBut),            
+            html.Br(),                                    
+            html.Span("Mengasuh Anak Tani",style=styBut),
             html.Span("Yayasan Brayat Pinuji",style=styBut),
-            html.Span("Yayasan Bina Asih Leleani",style=styBut),            
+            html.Span("Yayasan Bina Asih Leleani",style=styBut),           
         ],style={'border':'0px solid purple','float':'left','margin':'5px 0px 0px 20px'},className="five columns"),
         html.Div([
             html.P(["I enjoy ",
